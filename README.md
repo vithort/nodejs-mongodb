@@ -4,7 +4,7 @@ Tutorial CRUD em Node.js com driver nativo do MongoDB
 
 - Link: [Tutorial CRUD em Node.js com driver nativo do MongoDB](https://www.luiztools.com.br/post/tutorial-crud-em-node-js-com-driver-nativo-do-mongodb/)
 
-- Link: [https://www.luiztools.com.br/post/tutorial-crud-em-node-js-com-driver-nativo-do-mongodb-2/](https://www.luiztools.com.br/post/tutorial-crud-em-node-js-com-driver-nativo-do-mongodb-2/)
+- Link: [Tutorial CRUD em Node.js com driver nativo do MongoDB – Parte 2](https://www.luiztools.com.br/post/tutorial-crud-em-node-js-com-driver-nativo-do-mongodb-2/)
 
 - Link: [Tutorial CRUD em Node.js com driver nativo do MongoDB – Parte 3](https://www.luiztools.com.br/post/tutorial-crud-em-node-js-com-driver-nativo-do-mongodb-3/)
 
