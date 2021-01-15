@@ -1,11 +1,20 @@
 const mongoClient = require('mongodb').MongoClient;
+
 mongoClient
   .connect('mongodb://localhost:27017', { useUnifiedTopology: true })
   .then((conn) => (global.conn = conn.db('workshoptdc')))
   .catch((err) => console.log(err));
 
-function findAll(callback) {
-  global.conn.collection('customers').find({}).toArray(callback);
+const TAMANHO_PAGINA = 5;
+
+function findAll(pagina) {
+  const tamanhoSkip = TAMANHO_PAGINA * (pagina - 1);
+  return global.conn
+    .collection('customers')
+    .find({})
+    .skip(tamanhoSkip)
+    .limit(TAMANHO_PAGINA)
+    .toArray();
 }
 
 function insert(customer, callback) {
@@ -29,4 +38,17 @@ function deleteOne(id, callback) {
     .deleteOne({ _id: new ObjectId(id) }, callback);
 }
 
-module.exports = { findAll, insert, findOne, update, deleteOne };
+//callback deve considerar error e count
+function countAll() {
+  return global.conn.collection('customers').countDocuments();
+}
+
+module.exports = {
+  findAll,
+  insert,
+  findOne,
+  update,
+  deleteOne,
+  countAll,
+  TAMANHO_PAGINA,
+};
